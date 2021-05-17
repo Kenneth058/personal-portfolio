@@ -1,0 +1,92 @@
+{
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "extends": ["./config/eslint/browser.js", "airbnb", "airbnb/hooks", "plugin:prettier/recommended"],
+  "parser": "babel-eslint",
+  "plugins": ["react", "prettier", "babel", "flowtype", "import"],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+    // Extra Rules
+    "curly": ["error", "multi-line", "consistent"],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-magic-numbers": [2, { "ignore": [-1, 0, 1], "ignoreArrayIndexes": true }],
+    "lines-between-class-members": [2, "always", { "exceptAfterSingleLine": true }],
+    "react-hooks/exhaustive-deps": 0,
+    "arrow-parens": [2],
+    "arrow-body-style": [2],
+    // Lines
+    "newline-after-var": [2],
+    "newline-before-return": [2],
+    // Imports
+    "import/order": [2, {
+      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+      "newlines-between": "always",
+      "pathGroups": [
+        {
+          "pattern": "constants/**",
+          "group": "builtin",
+          "position": "after"
+        }
+      ]
+    }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+   ],
+    "import/no-unresolved": [2],
+    "import/named": [2],
+    "import/default": [2],
+    "import/namespace": [2],
+    "import/export": [2],
+    "import/first": [2],
+    "import/no-duplicates": [2],
+    "import/newline-after-import": [2],
+    // Disable Rules
+    "react/prop-types": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "no-underscore-dangle": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/jsx-fragments": 0,
+    "global-require": 0,
+    "import/no-cycle": 0, // TODO: Fix the issues reported of this Rule
+    "jsx-props-no-spreading": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0, // TODO: Enable this rule
+    "jsx-a11y/label-has-associated-control": 0,
+    "react/no-unescaped-entities": 0,
+    "react/jsx-wrap-multilines": 0,
+    "react/jsx-indent": 0,
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "import/no-extraneous-dependencies": 0,
+    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-param-reassign": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
+}
