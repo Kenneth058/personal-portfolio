@@ -52,10 +52,10 @@ const Index: React.SFC<IndexProps> = () => (
       />
       <div className="animate-onLoad sm:text-center lg:text-left lg:px-24 lg:col-span-2">
         <div>
-          <h1 className="text-5xl leading-13 uppercase font-bold text-yellow-1 sm:text-6xl lg:text-4.2r">
+          <h1 className="tracking-wide text-5xl leading-13 uppercase font-bold text-yellow-1 sm:text-6xl lg:text-4.2r">
             I'm Kenneth Chévez.
           </h1>
-          <h2 className="text-5xl leading-13 uppercase font-bold mt-4 sm:text-6xl lg:text-4.2r">
+          <h2 className="tracking-wide text-5xl leading-13 uppercase font-bold mt-4 sm:text-6xl lg:text-4.2r">
             Full Stack Developer
           </h2>
         </div>
