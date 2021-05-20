@@ -71,7 +71,7 @@ const Index: React.SFC<IndexProps> = () => (
               target="_blank"
               key={text}
               className={classNames(
-                'hover:text-yellow-1',
+                'inline-block hover:text-yellow-1',
                 idx < socialIcons.length - 1 && 'mr-6 lg:mr-10'
               )}
               rel="noreferrer"
