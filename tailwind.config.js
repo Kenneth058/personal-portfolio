@@ -37,6 +37,21 @@ module.exports = {
       boxShadow: {
         profile: '0 0 7px rgb(0 0 0 / 90%)',
       },
+      keyframes: {
+        onLoadKey: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(15%)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        onLoad: 'onLoadKey 0.5s ease-out',
+      },
     },
   },
   variants: {

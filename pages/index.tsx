@@ -6,6 +6,7 @@ import {
   faLinkedin,
   faInstagram,
   faGithub,
+  IconDefinition,
 } from '@fortawesome/free-brands-svg-icons'
 
 import { classNames } from '../helpers/utils'
@@ -13,7 +14,7 @@ import MainLayout from '../layouts/MainLayout'
 
 interface IndexProps {}
 
-const socialIcons = [
+const socialIcons: { text: string; Icon: IconDefinition; link: string }[] = [
   {
     text: 'linkedin',
     Icon: faLinkedin,
@@ -46,10 +47,10 @@ const Index: React.SFC<IndexProps> = () => (
     <div className="fixed hidden bg-yellow-1 w-full h-full-x2 -left-83pc -top-2/4 transform -rotate-15 lg:block" />
     <div className="relative font-poppins text-white p-10 min-h-screen flex flex-col justify-center overflow-y-auto sm:items-center sm:px-44 md:px-56 lg:grid lg:grid-cols-3 lg:gap-20 lg:px-16">
       <div
-        style={{ backgroundImage: `url("/myprofile.jpg")` }}
+        style={{ backgroundImage: `url("/myprofile.jpeg")` }}
         className="relative hidden bg-cover bg-top mb-14 border-4 border-gray-1 inline-block rounded-full w-97 h-97 sm:block lg:border-0 lg:rounded-3xl lg:h-5/6 lg:mb-0 lg:w-full lg:h-5/6 lg:shadow-profile"
       />
-      <div className="sm:text-center lg:text-left lg:px-24 lg:col-span-2">
+      <div className="animate-onLoad sm:text-center lg:text-left lg:px-24 lg:col-span-2">
         <div>
           <h1 className="text-5xl leading-13 uppercase font-bold text-yellow-1 sm:text-6xl lg:text-4.2r">
             I'm Kenneth Chévez.
@@ -58,7 +59,7 @@ const Index: React.SFC<IndexProps> = () => (
             Full Stack Developer
           </h2>
         </div>
-        <p className="text-2xl leading-12 tracking-wide font-open mt-8 lg:text-3xl lg:leading-3.5r">
+        <p className="text-2xl leading-12 tracking-wider font-open mt-8 lg:text-3xl lg:leading-3.5r">
           I'm a Costa Rican result oriented and committed developer. With experience in fields like
           Finance & Sports. Working in variety of areas like back-end, front-end and cloud computing
           development.
