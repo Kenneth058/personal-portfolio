@@ -64,7 +64,7 @@ const Index: React.SFC<IndexProps> = () => (
           Finance & Sports. Working in variety of areas like back-end, front-end and cloud computing
           development.
         </p>
-        <div className="mt-8 lg:mt-10">
+        <div className="mt-16 lg:mt-10">
           {socialIcons.map(({ text, Icon, link }, idx) => (
             <a
               href={link}
@@ -72,11 +72,11 @@ const Index: React.SFC<IndexProps> = () => (
               key={text}
               className={classNames(
                 'inline-block hover:text-yellow-1',
-                idx < socialIcons.length - 1 && 'mr-6 lg:mr-10'
+                idx < socialIcons.length - 1 && 'mr-8 lg:mr-10'
               )}
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={Icon} className="text-4xl lg:text-5xl" />
+              <FontAwesomeIcon icon={Icon} className="text-5xl" />
             </a>
           ))}
         </div>
