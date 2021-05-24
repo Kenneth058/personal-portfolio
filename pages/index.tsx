@@ -45,7 +45,7 @@ const socialIcons: { text: string; Icon: IconDefinition; link: string }[] = [
 const Index: React.SFC<IndexProps> = () => (
   <MainLayout>
     <div className="fixed hidden bg-yellow-1 w-full h-full-x2 -left-83pc -top-2/4 transform -rotate-15 lg:block" />
-    <div className="relative font-poppins text-white p-10 min-h-screen flex items-center flex-col justify-center overflow-y-auto sm:px-44 md:px-56 lg:grid lg:grid-cols-3 lg:gap-20 lg:px-16">
+    <div className="relative font-poppins text-white px-10 py-20 min-h-screen flex items-center flex-col justify-center overflow-y-auto sm:px-44 md:px-56 lg:grid lg:grid-cols-3 lg:gap-20 lg:px-16">
       <div
         style={{ backgroundImage: `url("/myprofile.jpeg")` }}
         className="relative bg-cover bg-top mb-14 border-4 border-gray-1 inline-block rounded-full w-97 h-97 lg:border-0 lg:rounded-3xl lg:h-5/6 lg:mb-0 lg:w-full lg:h-5/6 lg:shadow-profile"
